@@ -15,10 +15,20 @@ namespace PetProject.user
             User user = new User(name, surname, password, email, description);
             users.Add(user);
         }
-
         public void DeleteUser(Guid id)
         {
             users.RemoveAll(item => item.Id == id);
+        }
+        public void ShowUsers(List<User> users) 
+        {
+            foreach (var user in users) 
+            {
+                for (var i = 0; i < users.Count; i++) 
+                {
+                    Console.WriteLine($"Имя-{users[i].Name}, Фамилия-{users[i].SurName}, О себе-{users[i].Description}, " +
+                        $"Роль-{users[i].Role}, Email-{users[i].Email}");
+                }
+            }
         }
     }
     public class User
