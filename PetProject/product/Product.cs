@@ -37,10 +37,7 @@ namespace PetProject.product
         {
             foreach (var product in products)
             {
-                for (var i = 0; i < products.Count; i++)
-                {
-                    Console.WriteLine($"Имя-{products[i].Name}, Фамилия-{products[i].Description}, О себе-{products[i].Price}");
-                }
+                Console.WriteLine($"Имя-{product.Name}, Описание-{product.Description}, Цена-{product.Price}");
             }
         }
     }

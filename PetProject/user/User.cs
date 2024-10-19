@@ -21,13 +21,10 @@ namespace PetProject.user
         }
         public void ShowUsers(List<User> users) 
         {
-            foreach (var user in users) 
+            foreach (var user in users)
             {
-                for (var i = 0; i < users.Count; i++) 
-                {
-                    Console.WriteLine($"Имя-{users[i].Name}, Фамилия-{users[i].SurName}, О себе-{users[i].Description}, " +
-                        $"Роль-{users[i].Role}, Email-{users[i].Email}");
-                }
+                Console.WriteLine($"Имя-{user.Name}, Фамилия-{user.SurName}, О себе-{user.Description}, " +
+                                  $"Роль-{user.Role}, Email-{user.Email}");
             }
         }
     }
